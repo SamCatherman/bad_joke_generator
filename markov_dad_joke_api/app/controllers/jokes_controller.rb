@@ -6,10 +6,7 @@ class JokesController < ApplicationController
   end
 
   def generate
-    # ::MarkovChain.generate
-    byebug
-    # joke_params = MarkovChain.generate
-    # @joke = Joke.create(joke_params)
-    render json: "@joke"
+    dad_joke = Services::Api.fetch_joke
+    render json: dad_joke
   end
 end
