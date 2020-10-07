@@ -6,6 +6,7 @@ This program fetches a random Dad Joke from the api at https://icanhazdadjoke.co
 - Rails 6.0.3.3 or higher
 - Node 12.18.0 or higher
 - Heroku 7.42.1 or higher (for initializing application)
+    - *Note - If you don't have the heroku CLI installed and want to run both the API and Client manually, see below instructions for manual startup*
 
 ## Directions
 
@@ -22,6 +23,13 @@ This program fetches a random Dad Joke from the api at https://icanhazdadjoke.co
 #### Startup -
 - `$ cd ..` - return to application directory to run project
 - `$ rake start` - this command will run both the API and the client simultaneously
+
+#### Manual Startup - 
+If you don't have the Herkou CLI installed, the Procfile initializing both the client and the API will not work. The application can still be started with the following steps after all dependencies are installed.
+ 
+- open two terminal tabs from the root of the project.
+- In the first, run `$ cd application` and `$ rails s -p 3001` to start API
+- In the second run `$ cd application/client` and `npm run start` to start client
 
 Assuming the setup succeeded, the API will be running on your local port 3001, and the client on port 3000. A browser window should open automatically upon startup, but can be manually accessed at `http://localhost:3000`. Click the button and get a unique dad joke!
 
