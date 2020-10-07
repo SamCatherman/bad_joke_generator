@@ -18,6 +18,8 @@ This program fetches a random Dad Joke from the api at https://icanhazdadjoke.co
 #### Client -
 - `$ cd client` - The client application is located within the rails app. We will need to install dependencies here as well
 - `$ yarn install` or `$ npm install` - depending on your node package manager of choice
+
+#### Startup -
 - `$ cd ..` - return to application directory to run project
 - `$ rake start` - this command will run both the API and the client simultaneously
 
