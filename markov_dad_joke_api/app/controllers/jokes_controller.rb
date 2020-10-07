@@ -7,6 +7,9 @@ class JokesController < ApplicationController
 
   def generate
     dad_joke = Services::Api.fetch_joke
-    render json: dad_joke
+    markov_chain = Services::MarkovChain.new(dad_joke["joke"])
+    markov_joke = markov_chain.generate
+    @joke = Joke.create(text: dad_joke, markov_translation: markov_joke)
+    render json: @joke
   end
 end
